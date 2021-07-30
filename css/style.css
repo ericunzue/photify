@@ -99,6 +99,7 @@ footer a {
     display: flex;
     flex-grow: 1;
     overflow: hidden;
+    animation: BounceIn 0.8s;
 }
 
 .image__item {
