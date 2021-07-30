@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+}
+
+body {
+    background: rgb(17, 194, 195);
+}
+
+.grid-container {
+    position: relative;
+}
+
+nav {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 4em;
+    margin-top: 1.5rem;
+    top: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.search {
+    position: relative;
+    width: 30rem;
+    height: 70%;
+    display: flex;
+    border-radius: 5px;
+    margin: auto;
+    -webkit-box-shadow: 5px 5px 15px -2px rgba(0, 0, 0, 0.801);
+    box-shadow: 5px 5px 15px -2px rgba(0, 0, 0, 0.76);
+}
+
+.searchTerm {
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    border-right: none;
+    padding: 5px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #08162F;
+    font-size: 1rem;
+}
+
+.searchTerm:focus {
+    color: #08162F;
+}
+
+.searchButton {
+    width: 10%;
+    height: 100%;
+    background: rgb(0, 180, 204);
+    text-align: center;
+    color: #fff;
+    border: 1px solid black;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+main {
+    display: flex;
+    align-self: center;
+    padding: .5em;
+    width: 95%;
+    margin: 6rem auto 2rem auto;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    background: #FFFFFF;
+    min-height: 100vh;
+}
+
+footer {
+    display: flex;
+    background-color: #46332D;
+    font-size: 15px;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 4rem;
+}
+
+footer a {
+    margin: auto;
+    text-decoration: none;
+    color: #f3f1f5;
+}
+
+.image--selection {
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.image__item {
+    position: relative;
+    height: 40vh;
+    flex-grow: 1;
+    margin: 8px;
+    object-fit: cover;
+    object-position: center center;
+    animation: BounceIn 0.8s;
+}
+
+.btn-container {
+    position: absolute;
+    align-self: flex-end;
+    width: 3rem;
+    height: 3rem;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    background: rgb(255, 255, 255);
+    border-radius: 80px;
+    border: 2px solid rgb(0, 180, 204, 0.5);
+}
+
+.download-btn {
+    position: absolute;
+    align-self: flex-end;
+    width: 2.2rem;
+    height: 2.2rem;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    background: rgb(18, 19, 19);
+    border-radius: 80px;
+    border: 2px solid #000000;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.image--selection:hover .download-btn {
+    opacity: 1;
+    animation: BounceIn 0.8s;
+}
+
+.animate-entrance {
+    animation: BounceIn 0.8s;
+}
+
+@keyframes BounceIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
